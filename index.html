@@ -355,11 +355,23 @@
       const LastFooterContainer1 = document.createElement("div")
       LastFooterContainer1.innerHTML='<i class="fa fa-copyright " aria-hidden="true"></i>  2024,CET Cell All Rights Reserved';
         const LastFooterContainer2 = document.createElement("div")
-        LastFooterContainer2.innerText="Powered By: Synthesys EduCMS "
+        LastFooterContainer2.style.display="flex"
+        LastFooterContainer2.className="gap-1"
+        LastFooterContainer2.style.fontSize="16px"
+    
+        const LastFooterContainer2H5 = document.createElement("h6")
+        LastFooterContainer2H5.innerText="Powered By:  "
+        const LastFooterContainer2H6 = document.createElement("h6")
+        LastFooterContainer2H6.innerText=" Synthesys EduCMS"
+        LastFooterContainer2H6.style.color="#EEC646"
+        
       
       footerSection.appendChild(footerContainer)
       footer.appendChild(footerSection)
       LastFooterContainer.appendChild(LastFooterContainer1)
+      
+      LastFooterContainer2.appendChild(LastFooterContainer2H5)
+      LastFooterContainer2.appendChild(LastFooterContainer2H6)
       LastFooterContainer.appendChild(LastFooterContainer2)
       
       LastFooter.appendChild(LastFooterContainer)
