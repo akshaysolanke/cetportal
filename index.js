@@ -502,7 +502,7 @@ aboutSection.style.backgroundPosition="center 0px"
 aboutSection.style.backgroundSize="cover"
 aboutSection.style.backgroundRepeat="no-repeat"
 aboutSection.style.backgroundAttachment="fixed"
-aboutSection.style.height="1500px"
+
 
 // create div for white color
 const aboutSectionOverlay = document.createElement("div")
@@ -1214,3 +1214,13 @@ table.appendChild(tableBody)
 tableHead.appendChild(tableHeadTr)
 menuContainer.appendChild(table)
 menuContainer.appendChild(loadMoreBtn)
+
+
+
+// last part 
+const bundleScript = document.createElement("script");
+bundleScript.src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js";
+bundleScript.integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM";
+bundleScript.crossOrigin="anonymous";
+
+document.body.appendChild(bundleScript);

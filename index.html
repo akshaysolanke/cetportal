@@ -1,12 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <div id="root"></div>
+    <script src="/jquery-3.7.1.min.js"></script>
     <script src="/index.js"></script>
-   
-</body>
+    <script>
+      // gallery part slider
+
+      const gallery = document.createElement("section")
+      gallery.style.height="530px"
+      gallery.style.background="#163269"
+      
+      $("main").append(gallery);
+      $(gallery).addClass("p-5")
+     
+      const galleryContainer = document.createElement("div")
+      galleryContainer.className="container border border-warning position-relative"
+      galleryContainer.style.height="450px"
+      const galleryTitle = document.createElement("h2")
+      $(galleryTitle).text("Gallery");
+      galleryTitle.style.background="#163269"
+      galleryTitle.style.top="-21px"
+      galleryTitle.className="text-white px-3 position-absolute"
+
+      $(galleryContainer).html(
+        `<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-5 ms-auto">
+                <img  style="height:300px; width:300px;"src="/images/slide1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-4 p-5 me-auto">
+                <img style="height:300px; width:300px;"src="/images/slide2.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-5 ms-auto">
+                <img style="height:300px; width:300px;"src="/images/slide3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-4 p-5 me-auto">
+                <img style="height:300px; width:300px;"src="/images/slide4.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-5 ms-auto">
+                <img style="height:300px; width:300px;"src="/images/slide5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-4 p-5 me-auto">
+                <img style="height:300px; width:300px;" src="/images/slide6.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="LoadMoreBtn mb-5 px-3">
+        <button style="background: #204590;" class="text-white py-2 px-4 rounded-1 border-0">Load More</button>
+    </div>
+`
+      );
+
+
+
+
+      galleryContainer.appendChild(galleryTitle)
+      
+      gallery.appendChild(galleryContainer)
+
+      // second slide 
+
+      const stickerSlider = document.createElement("section")
+      stickerSlider.style.height="230px"
+      stickerSlider.style.width="100%"
+      stickerSlider.style.background="white"
+
+      const stickerSliderContainer = document.createElement("div")
+      stickerSliderContainer.style.height="210px"
+      stickerSliderContainer.style.width="80%"
+      stickerSliderContainer.className="mx-auto mt-4"
+
+      $(stickerSliderContainer).html(`
+      <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="row">
+            <div class="col-12 col-lg-2 ms-auto">
+                <img src="/images/s1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2 me-auto">
+                <img src="/images/s5.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+            <div class="col-12 col-lg-2 ms-auto">
+                <img src="/images/s6.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s7.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s8.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s9.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2 me-auto">
+                <img src="/images/s10.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+            <div class="col-12 col-lg-2 ms-auto">
+                <img src="/images/s11.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s12.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s13.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="/images/s14.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2 me-auto">
+                <img src="/images/s15.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+    <span <i style="color:#BCBCBC; font-size: 20px;" class="fa fa-chevron-left" aria-hidden="true"> </i></span>
+    <span  class="visually-hidden "></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+    <span <i style="color:#BCBCBC; font-size: 20px;" class="fa fa-chevron-right" aria-hidden="true"> </i></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      `);
+
+
+      stickerSlider.appendChild(stickerSliderContainer)
+      main.appendChild(stickerSlider)
+
+      // footer part started from here 
+      const footer = document.createElement("footer")
+      const footerSection = document.createElement("section")
+      footerSection.style.width="100%"
+     // footerSection.style.height="200px"
+      footerSection.style.background="#163269"
+
+      const footerContainer = document.createElement("div")
+      footerContainer.className="row d-flex justify-content-between mx-auto "
+      footerContainer.style.width="80%"
+      
+      // col-1
+      const footerContainer1 = document.createElement("div")
+      footerContainer1.className="col-12 col-lg-3 pt-3"
+      const footerContainer1H2 = document.createElement("h2")
+      footerContainer1H2.innerText="Address"
+      footerContainer1H2.style.color="#EEC649"
+      footerContainer1H2.style.fontSize="20px"
+      footerContainer1H2.className="my-3"
+      
+      const footerContainer1Location = document.createElement("div")
+      footerContainer1Location.style.fontSize="17px"
+      footerContainer1Location.style.lineHeight="23px"
+      footerContainer1Location.className="d-flex text-white mb-3 gap-2 "
+      footerContainer1Location.innerHTML='<i style="color: #EEC641;" class="fa fa-map-marker pt-1 fw-bold" aria-hidden="true"></i>8th Floor, New Excelsior Building,A. K. Nayak Marg, Fort,Mumbai- 400 001';
+      
+      const phoneCall = document.createElement("div")
+      phoneCall.style.fontSize="17px"
+      phoneCall.style.lineHeight="23px"
+      phoneCall.className="d-flex text-white mb-3 gap-2 "
+      phoneCall.innerHTML='<i style="color: #EEC641;" class="fa fa-phone pt-1 fw-bold" aria-hidden="true"></i>07969134401, 07969134402';
+     
+      const tollNo = document.createElement("div")
+      tollNo.style.fontSize="17px"
+      tollNo.style.lineHeight="23px"
+      tollNo.className="d-flex text-white mb-3 gap-2 "
+      tollNo.innerHTML='<i style="color: #EEC641;" class="fa fa-phone pt-1 fw-bold" aria-hidden="true"></i>Toll free number- 18002090191';
+      
+      const link = document.createElement("div")
+      link.style.fontSize="17px"
+      link.style.lineHeight="23px"
+      link.className="d-flex text-white mb-3 gap-2 "
+      link.innerHTML='<i style="color: #EEC641;" class="fa fa-globe pt-1 fw-bold" aria-hidden="true"></i>www.mahacet.org';
+
+      // col-2
+      const footerContainer2 = document.createElement("div")
+      footerContainer2.className="col-12 col-lg-3 pt-3"
+      const footerContainer2H2 = document.createElement("h2")
+      footerContainer2H2.innerText="Quick Links"
+      footerContainer2H2.style.fontSize="20px"
+      footerContainer2H2.style.color="#EEC649"
+      footerContainer2H2.className="my-3"
+
+      const footerContainer2Row = document.createElement("div")
+      footerContainer2Row.className="row justify-content-between "
+      footerContainer2Row.style.cursor="pointer"
+      // col-1
+      const footerContainer2Row1 = document.createElement("div")
+      footerContainer2Row1.className="col-12 col-lg-5 "
+      const ele1 = document.createElement("div")
+      ele1.className="d-flex text-white mb-2 gap-3"
+      ele1.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>Home';
+      
+      const ele2 = document.createElement("div")
+      ele2.className="d-flex text-white mb-2 gap-3"
+      ele2.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>About Us';
+     
+      const ele3 = document.createElement("div")
+      ele3.className="d-flex text-white mb-2 gap-3"
+      ele3.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>CET';
+      
+      const ele4 = document.createElement("div")
+      ele4.className="d-flex text-white mb-2 gap-3"
+      ele4.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>Admission';
+      //col-2
+      const footerContainer2Row2 = document.createElement("div")
+      footerContainer2Row2.className="col-12 col-lg-5"
+
+      const element1 = document.createElement("div")
+      element1.className="d-flex text-white mb-2 gap-3"
+      element1.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>Search_Institute';
+      
+      const element2 = document.createElement("div")
+      element2.className="d-flex text-white mb-2 gap-3"
+      element2.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>CET_Statistics';
+      
+      const element3 = document.createElement("div")
+      element3.className="d-flex text-white mb-2 gap-3"
+      element3.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>CAP_Statistics';
+      
+      const element4 = document.createElement("div")
+      element4.className="d-flex text-white mb-2 gap-3"
+      element4.innerHTML='<i style="color:#EEC641;" class="fa fa-caret-right mt-1" aria-hidden="true"></i>Contact';
+
+      //col-3
+      const footerContainer3 = document.createElement("div")
+      footerContainer3.className="col-12 col-lg-3 pt-3"
+      const footerContainer3H2 = document.createElement("h2")
+      footerContainer3H2.innerText="Visitor Counter"
+      footerContainer3H2.style.fontSize="20px"
+      footerContainer3H2.style.color="#EEC649"
+      footerContainer3H2.className="my-3"
+
+      const footerContainer3H1 = document.createElement("h1")
+      footerContainer3H1.innerText="Follow Us On Social Media"
+      footerContainer3H1.style.fontSize="22px"
+      footerContainer3H1.style.color="#E0BF47"
+      footerContainer3H1.style.paddingTop="15px"
+
+      const imgContainer = document.createElement("div")
+      imgContainer.className="p-2 d-flex gap-3"
+    
+      const imgBox1 = document.createElement("div")
+      imgBox1.style.height="32px"
+      imgBox1.style.width="32px"
+      imgBox1.className=" d-flex justify-content-center align-items-center bg-danger rounded-3"
+      imgBox1.innerHTML='<i class="fa fa-youtube-play text-white" aria-hidden="true"></i>';
+     
+      const imgBox2 = document.createElement("div")
+      imgBox2.style.height="32px"
+      imgBox2.style.width="32px"
+      imgBox2.className=" d-flex justify-content-center align-items-center rounded-3"
+      imgBox2.style.background="#375593"
+      imgBox2.innerHTML='<i class="fa fa-facebook text-white" aria-hidden="true"></i>';
+      
+      const imgBox3 = document.createElement("div")
+      imgBox3.style.height="32px"
+      imgBox3.style.width="32px"
+      imgBox3.className=" d-flex justify-content-center align-items-center bg-dark rounded-3"
+      imgBox3.innerHTML='<i class="fa fa-twitter text-white" aria-hidden="true"></i>';
+      
+      const imgBox4 = document.createElement("div")
+      imgBox4.style.height="32px"
+      imgBox4.style.width="32px"
+      imgBox4.style.background="#A30C45"
+      imgBox4.className=" d-flex justify-content-center align-items-center bg-danger rounded-3"
+      imgBox4.innerHTML='<i class="fa fa-instagram text-white" aria-hidden="true"></i>';
+
+
+
+
+      
+      footerContainer1.appendChild(footerContainer1H2)
+      footerContainer1.appendChild(footerContainer1Location)
+      footerContainer1.appendChild(phoneCall)
+      footerContainer1.appendChild(tollNo)
+      footerContainer1.appendChild(link)
+      footerContainer.appendChild(footerContainer1)
+      footerContainer2.appendChild(footerContainer2H2)
+      footerContainer2.appendChild(footerContainer2Row)
+      footerContainer2Row.appendChild(footerContainer2Row1)
+      footerContainer2Row1.appendChild(ele1)
+      footerContainer2Row1.appendChild(ele2)
+      footerContainer2Row1.appendChild(ele3)
+      footerContainer2Row1.appendChild(ele4)
+      footerContainer2Row.appendChild(footerContainer2Row2)
+      footerContainer2Row2.appendChild(element1)
+      footerContainer2Row2.appendChild(element2)
+      footerContainer2Row2.appendChild(element3)
+      footerContainer2Row2.appendChild(element4)
+      footerContainer.appendChild(footerContainer2)
+      footerContainer3.appendChild(footerContainer3H2)
+      footerContainer3.appendChild(footerContainer3H1)
+      footerContainer3.appendChild(imgContainer)
+      imgContainer.appendChild(imgBox1)
+      imgContainer.appendChild(imgBox2)
+      imgContainer.appendChild(imgBox3)
+      imgContainer.appendChild(imgBox4)
+      footerContainer.appendChild(footerContainer3)
+
+      // last footer
+
+      const LastFooter = document.createElement("div")
+      LastFooter.style.background="#0C224D"
+
+      const LastFooterContainer = document.createElement("div")
+      LastFooterContainer.className="py-3 mx-auto text-white px-3 d-flex justify-content-between"
+      LastFooterContainer.style.width="80%"
+      
+      const LastFooterContainer1 = document.createElement("div")
+      LastFooterContainer1.innerHTML='<i class="fa fa-copyright " aria-hidden="true"></i>  2024,CET Cell All Rights Reserved';
+        const LastFooterContainer2 = document.createElement("div")
+        LastFooterContainer2.innerText="Powered By: Synthesys EduCMS "
+      
+      footerSection.appendChild(footerContainer)
+      footer.appendChild(footerSection)
+      LastFooterContainer.appendChild(LastFooterContainer1)
+      LastFooterContainer.appendChild(LastFooterContainer2)
+      
+      LastFooter.appendChild(LastFooterContainer)
+      footer.appendChild(LastFooter)
+      root.appendChild(footer)
+
+    </script>
+  </body>
 </html>
