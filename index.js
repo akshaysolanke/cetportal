@@ -1206,7 +1206,9 @@ tableHeadData.forEach(function(th){
 // button part
 const loadMoreBtn = document.createElement("button")
 loadMoreBtn.innerText="Load More"
-loadMoreBtn.className="fw-bold px-3 py-1 text-white border-0"
+loadMoreBtn.className="fw-bold  py-1 text-white border-0 rounded-2"
+loadMoreBtn.style.height="39px"
+loadMoreBtn.style.width="119px"
 loadMoreBtn.style.backgroundColor="#204590"
 // appending table section 
 table.appendChild(tableHead)
