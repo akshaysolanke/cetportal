@@ -240,12 +240,12 @@ headerBottomNavUl.className = "d-flex justify-content-between w-75 m-0 ";
 
 const headerBottomNavUlLiList = [
   "Home",
-  "About Us",
-  "CETs",
-  "CAP",
-  "Downloads",
+  'About Us <i class="fa fa-caret-down" aria-hidden="true"></i>',
+  'CETs <i class="fa fa-caret-down" aria-hidden="true"></i>',
+  'CAP <i class="fa fa-caret-down" aria-hidden="true"></i>',
+  'Downloads <i class="fa fa-caret-down" aria-hidden="true"></i>',
   "Statics",
-  "Online System",
+  'Online System <i class="fa fa-caret-down" aria-hidden="true"></i>',
   "Event",
   "Contact",
 ];
@@ -255,7 +255,7 @@ headerBottomNavUlLiList.forEach(function (ele) {
   const headerBottomNavUlLi = document.createElement("li");
   const headerBottomNavUlLiAtag = document.createElement("a");
   headerBottomNavUlLiAtag.href = "#";
-  headerBottomNavUlLiAtag.innerText = ele;
+  headerBottomNavUlLiAtag.innerHTML = ele;
   headerBottomNavUlLiAtag.className =
     "text-decoration-none text-white a_headerLi";
   headerBottomNavUlLi.appendChild(headerBottomNavUlLiAtag);
@@ -415,12 +415,12 @@ function IconTitleCard(icon, titleString, background) {
   title.style.fontWeight = "600";
   title.innerText = titleString;
   // create blink tag
-  // const blinkImg=document.createElement("img")
-  // blinkImg.style.width="20px"
-  // blinkImg.style.height="15px"
-  // blinkImg.className="d-flex"
-  // blinkImg.style.background=blinkImg
-
+  // const newImg1= document.createElement("img")
+  //  newImg1.src="/images/blinknew.gif"
+  //  newImg1.alt="new"
+  //  if(ele.isNew1){
+  //   rightBox.appendChild(newImg1)
+  //  }
   //appending elements
 
   rightBox.appendChild(title);
