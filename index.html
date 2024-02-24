@@ -91,11 +91,30 @@
       stickerSlider.style.width="100%"
       stickerSlider.style.background="white"
 
+      // image tag 
+      const ImgTag = document.createElement("img")
+      ImgTag.src="/images/peoples.jpg"
+      ImgTag.alt=""
+      ImgTag.style.width="100%"
+      ImgTag.style.height="230px"
+      ImgTag.style.objectFit="cover"
+     ImgTag.style.position="absolute"
+     
+      
+      // color tag
+      const colorTag = document.createElement("div")
+      colorTag.style.width="100%"
+      colorTag.style.height="230px"
+      colorTag.style.backgroundColor="#ffffffe6"
+      colorTag.style.position="absolute"
+
+
       const stickerSliderContainer = document.createElement("div")
       stickerSliderContainer.style.height="210px"
       stickerSliderContainer.style.width="80%"
       stickerSliderContainer.className="mx-auto mt-4"
       stickerSliderContainer.style.cursor="pointer"
+      stickerSliderContainer.style.position="relative"
 
       $(stickerSliderContainer).html(`
       <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
@@ -169,8 +188,14 @@
 </div>
       `);
 
+        
 
+
+        
+      stickerSlider.appendChild(ImgTag)
+        stickerSlider.appendChild(colorTag)
       stickerSlider.appendChild(stickerSliderContainer)
+      
       main.appendChild(stickerSlider)
 
       // footer part started from here 
