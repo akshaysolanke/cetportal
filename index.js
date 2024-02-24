@@ -344,9 +344,9 @@ bannerLeftCourseNumbers.style.width = "100%";
 
 function cardNumber(title, descriptionText, background, columns) {
   const card = document.createElement("div");
-  // card.style.width = "33%";
-  card.className = `col-12-col-lg-${columns || 4} text-center text-white py-2`;
-   card.style.width = "33%";
+
+  card.className = `col-12 col-lg-${columns || 4} text-center text-white py-2`;
+  
   
   if (background) {
     card.style.background = background;
